@@ -2,7 +2,7 @@ const express = require('express')
 const multer = require('multer')
 const boom = require('boom')
 
-const roleService = require('../services/jurisdiction')
+const roleService = require('../services/role')
 const Result = require('../models/Result')
 const Img = require('../models/Img')
 const { UPLOAD_PATH_IMG } = require('../utils/constant')

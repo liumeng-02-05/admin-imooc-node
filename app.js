@@ -17,20 +17,20 @@ app.use(bodyParser.json())
 
 app.use('/', router)
 
-const server = app.listen(5000, function() {
+const server = app.listen(5002, function() {
   const host = server.address().address
   const port = server.address().port
 
   console.log('HTTP Server is running on http://%s:%s', host, port)
 })
-const privateKey = fs.readFileSync('./https/5530542_www.liumeng.xin.key', 'utf8')
-const certificate = fs.readFileSync('./https/5530542_www.liumeng.xin.pem', 'utf8')
-const credentials = { key: privateKey, cert: certificate }
-const httpsServer = https.createServer(credentials, app)
-const SSLPORT = 18082
-httpsServer.listen(SSLPORT, function() {
-  console.log('HTTPS Server is running on: https://localhost:%s', SSLPORT)
-})
+// const privateKey = fs.readFileSync('./https/5530542_www.liumeng.xin.key', 'utf8')
+// const certificate = fs.readFileSync('./https/5530542_www.liumeng.xin.pem', 'utf8')
+// const credentials = { key: privateKey, cert: certificate }
+// const httpsServer = https.createServer(credentials, app)
+// const SSLPORT = 18082
+// httpsServer.listen(SSLPORT, function() {
+//   console.log('HTTPS Server is running on: https://localhost:%s', SSLPORT)
+// })
 
 process.on('uncaughtException', function(err) {
   console.log('uncaughtException', err)

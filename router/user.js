@@ -4,7 +4,7 @@ const boom = require('boom')
 const { body, validationResult } = require('express-validator')
 const Result = require('../models/Result')
 const userService = require('../services/user')
-const roleService = require('../services/jurisdiction')
+const roleService = require('../services/role')
 const {
   PWD_SALT,
   PRIVATE_KEY,
